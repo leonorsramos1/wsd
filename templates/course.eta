@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course</title>
+</head>
+<body>
+  <h1>Course: <%= course.name %></h1>
+  <a href="/courses">Back to Courses</a>
+</body>
+</html>

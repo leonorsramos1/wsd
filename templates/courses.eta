@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Courses</title>
+</head>
+<body>
+  <h1>Courses</h1>
+  <form action="/courses" method="post">
+    <label for="courseName">Course name:</label>
+    <input type="text" id="courseName" name="courseName" required>
+    <input type="submit" value="Add">
+  </form>
+
+  <h2>Existing Courses</h2>
+  <ul>
+    <% for (const course of courses) { %>
+      <li>
+        <a href="/courses/<%= course.id %>"><%= course.name %></a>
+        <form action="/courses/<%= course.id %>/delete" method="post" style="display:inline;">
+          <input type="submit" value="Delete">
+        </form>
+      </li>
+    <% } %>
+  </ul>
+</body>
+</html>
